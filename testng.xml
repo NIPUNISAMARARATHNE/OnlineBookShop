@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/LearnJava2023/test 2023.11.04/OnlineBookShop">
+        <classes>
+            <class name="com.ucsc.automation.tests.AdminPanelLogin">
+                <methods>
+                    <include name="launchAdmin"/>
+                    <include name="validationMSgCheckOnlyClickingSignInButton"/>
+                    <include name="validationMSGCheckWithInvalidPWD"/>
+                    <include name="validationMSGCheckWithInvalidUsername"/>
+                    <include name="adminLogin"/>
+                    <include name="verifyLogin"/>
+                    <include name="logout"/>
+                    <include name="navigateTOWebsiteAfterLogout"/>
+                </methods>
+            </class>
+            <class name="com.ucsc.automation.tests.AddNewBook">
+                <methods>
+                    <include name="login"/>
+                    <include name="navigateToBookList"/>
+                    <include name="checkPageHeader"/>
+                    <include name="createNewBook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
