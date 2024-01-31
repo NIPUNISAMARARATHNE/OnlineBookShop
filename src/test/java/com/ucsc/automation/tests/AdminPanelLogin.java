@@ -1,10 +1,12 @@
 package com.ucsc.automation.tests;
 
+import com.ucsc.automation.pages.PageBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -13,17 +15,10 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 
 
-public class AdminPanelLogin {
-
-        WebDriver driver;
-
+public class AdminPanelLogin extends PageBase {
 
         @Test
         public void launchAdmin(){
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-            driver.manage().window().maximize();
             driver.get("https://www.automationstudy.site/admin/login.php");
             String ExpectedURL=("https://www.automationstudy.site/admin/login.php");
             String ActualURL= driver.getCurrentUrl();
@@ -118,14 +113,21 @@ public class AdminPanelLogin {
 
         @Test
         public void navigateTOWebsiteAfterLogout() throws InterruptedException {
-            Thread.sleep(4000);
+            Thread.sleep(3000);
             driver.findElement(By.xpath("//a[normalize-space()='Go to Website']")).click();
             String actualURL = driver.getCurrentUrl();
             String expectedURL = "https://www.automationstudy.site/";
             assertEquals(actualURL,expectedURL, "invalid admin login page url");
-
-//      driver.quit();
+            driver.navigate().back();
+            Thread.sleep(3000);
         }
+
+//        @AfterClass
+//        public void removeDriver() {
+//            driver.quit();
+//        }
     }
+
+
 
 

@@ -1,2 +1,4 @@
-package com.ucsc.automation.utils;public class TestNGUtils {
+package com.ucsc.automation.utils;
+
+public class TestNGUtils {
 }
