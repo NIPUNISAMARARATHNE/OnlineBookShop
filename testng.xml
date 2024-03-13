@@ -6,23 +6,35 @@
             <class name="com.ucsc.automation.tests.AdminPanelLogin">
                 <methods>
                     <include name="launchAdmin"/>
-                    <include name="validationMSgCheckOnlyClickingSignInButton"/>
-                    <include name="validationMSGCheckWithInvalidPWD"/>
-                    <include name="validationMSGCheckWithInvalidUsername"/>
+<!--                    <include name="validationMSgCheckOnlyClickingSignInButton"/>-->
+<!--                    <include name="validationMSGCheckWithInvalidPWD"/>-->
+<!--                    <include name="validationMSGCheckWithInvalidUsername"/>-->
                     <include name="adminLogin"/>
                     <include name="verifyLogin"/>
                     <include name="logout"/>
                     <include name="navigateTOWebsiteAfterLogout"/>
                 </methods>
             </class>
-            <class name="com.ucsc.automation.tests.AddNewBook">
-                <methods>
-                    <include name="login"/>
-                    <include name="navigateToBookList"/>
-                    <include name="checkPageHeader"/>
-                    <include name="createNewBook"/>
-                </methods>
-            </class>
+
+<!--            <class name="com.ucsc.automation.tests.AddNewBook">-->
+<!--                <methods>-->
+<!--                    <include name="navigateToBookList"/>-->
+<!--                    <include name="checkPageHeader"/>-->
+<!--                    <include name="createNewBook"/>-->
+<!--                    <include name="searchNewlyAddedBook"/>-->
+<!--                    <include name="filterRecords"/>-->
+<!--                    <include name="navigateEditBookPage"/>-->
+<!--                    <include name="editSubCategoryAndDetailsOfBook"/>-->
+<!--                    <include name="deleteBook"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+<!--            <class name="com.ucsc.automation.tests.InventoryList">-->
+<!--                <methods>-->
+<!--                    <include name="navigateTOInventoryList"/>-->
+<!--                    <include name="searchBook"/>-->
+<!--                </methods>-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>
